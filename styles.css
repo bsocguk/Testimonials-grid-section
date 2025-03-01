@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    background: #edf2f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 1100px;
+}
+
+.testimonial {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.testimonial-purple {
+    background: #733FC8;
+    color: white;
+    grid-column: span 2;
+}
+
+.testimonial-dark {
+    background: #48556A;
+    color: white;
+}
+
+.testimonial-light {
+    background: white;
+    color: black;
+}
+
+.testimonial-black {
+    background: #19212E;
+    color: white;
+    grid-column: span 2;
+}
+
+.testimonial-white {
+    background: white;
+    color: black;
+    grid-column: span 2;
+}
+
+.testimonial-purple h3,
+.testimonial-purple p,
+.testimonial-purple h4 {
+    color: white;
+}
+
+.testimonial-dark h3,
+.testimonial-dark p,
+.testimonial-dark h4 {
+    color: white;
+}
+
+.testimonial-black h3,
+.testimonial-black p,
+.testimonial-black h4 {
+    color: white;
+}
+
+/* Layout */
+.testimonial-purple {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.testimonial-dark {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+}
+
+.testimonial-white {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.testimonial-light {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+}
+
+.testimonial-black {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .testimonial-purple, .testimonial-black, .testimonial-white {
+        grid-column: span 1;
+    }
+}
